@@ -14,13 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//View default
-Route::get('/', function () {
-    return view('registrar_lata');
-});
+// HOME
+Route::view("/","home")->name("home");
+Route::view("/conectar","conectar")->name("conectar");
+Route::view("/productos","productos")->name("productos");
+Route::view("/promociones","promociones")->name("promociones");
+Route::view("/carrito","carrito")->name("carrito");
+Route::view("/proveedores","proveedores")->name("proveedores");
 
-//View rutas 
-Route::view("/","registrar_botellas")->name("registrar_botellas");
-Route::view("/","registrar_lata")->name("registrar_lata");
-Route::view("/","ver_botellas")->name("ver_botellas");
-Route::view("/","ver_lata")->name("ver_lata");
+
+//ADMIN VIEWS
+
+Route::view("/admin_home","admin_home")->name("admin_home");
+Route::view("/admin_productos","admin_productos")->name("admin_productos");
+Route::view("/admin_usuarios","admin_usuarios")->name("admin_usuarios");
+Route::view("/admin_proveedores","admin_proveedores")->name("admin_proveedores");
+Route::view("/admin_ventas","admin_ventas")->name("admin_ventas");
